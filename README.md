@@ -238,6 +238,3 @@ You can visit `/admin/` after and will be greeted by a login dialog (depending o
 
 For NetlifyCMS specific issues visit the [official documentation](https://www.netlifycms.org/docs/intro/).
 
-# Author
-
-Ruben Harutyunyan ([@Vagr9K](https://twitter.com/Vagr9K))
