@@ -5,7 +5,7 @@ import { Component } from 'react'
 import { Link } from 'gatsby'
 import Navigation from '../Nav/Nav'
 import ColorButton from '../Buttons/ButtonColor'
-import pokooi from '../../../static/logos/svg/pokooi.svg'
+import Logo from '../../../static/logos/svg/hakooi-stone-engineer.svg'
 import './Header.css'
 
 class Header extends Component {
@@ -38,7 +38,7 @@ class Header extends Component {
               py: 2,
             }}
           >
-            <img src={pokooi} alt="pokooi logo" />
+            <img className="w-full" src={Logo} alt="Stone Engineer" />
           </Link>
           <div sx={{ mx: 'auto' }} />
           <Navigation />

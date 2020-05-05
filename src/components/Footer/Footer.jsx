@@ -6,7 +6,7 @@ import { Link } from 'gatsby'
 // import UserLinks from '../UserLinks/UserLinks'
 import { Twitter, Facebook, Instagram } from 'react-feather'
 import './Footer.css'
-import pokooi from '../../../static/logos/svg/pokooi.svg'
+import Logo from '../../../static/logos/svg/hakooi-stone-engineer.svg'
 
 class Footer extends Component {
   render() {
@@ -30,7 +30,7 @@ class Footer extends Component {
           <div className=" sm:flex sm:mt-8">
             <div className="mt-8 sm:mt-0 sm:w-full flex flex-col md:flex-row justify-between">
               <div className="footer-item">
-                <img src={pokooi} alt="pokooi" />
+                <img className="w-full" src={Logo} alt="Stone Engineer" />
               </div>
               <div className="footer-item">
                 <span className="font-bold text-gray-700 uppercase mb-6">
