@@ -1,8 +1,8 @@
 /** @jsx jsx */
 
-import { jsx, ThemeProvider } from 'theme-ui'
+import { jsx } from 'theme-ui'
 import React from 'react'
-import Prism from '@theme-ui/prism'
+// import Prism from '@theme-ui/prism'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../layout'
@@ -16,13 +16,6 @@ import config from '../../data/SiteConfig'
 import './b16-tomorrow-dark.css'
 import './post.css'
 
-import theme from './theme'
-
-const components = {
-  pre: ({ children }) => <>{children}</>,
-  code: Prism,
-}
-
 export default class PostTemplate extends React.Component {
   render() {
     const { data, pageContext } = this.props
@@ -34,32 +27,30 @@ export default class PostTemplate extends React.Component {
     }
 
     return (
-      <ThemeProvider theme={theme} components={components}>
-        <Layout>
-          <div>
-            <Helmet>
-              <title>{`${post.title} | ${config.siteTitle}`}</title>
-            </Helmet>
-            <SEO postPath={slug} postNode={postNode} postSEO />
-            <div
-              sx={{
-                mx: 'auto',
-              }}
-            >
-              {/* <Header config={config} /> */}
-              <h1>{post.title}</h1>
-              <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-              <div className="post-meta">
-                <PostTags tags={post.tags} />
-                <SocialLinks postPath={slug} postNode={postNode} />
-              </div>
-              <UserInfo config={config} />
-              <Disqus postNode={postNode} />
-              {/* <Footer config={config} /> */}
+      <Layout>
+        <div>
+          <Helmet>
+            <title>{`${post.title} | ${config.siteTitle}`}</title>
+          </Helmet>
+          <SEO postPath={slug} postNode={postNode} postSEO />
+          <div
+            sx={{
+              mx: 'auto',
+            }}
+          >
+            {/* <Header config={config} /> */}
+            <h1>{post.title}</h1>
+            <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+            <div className="post-meta">
+              <PostTags tags={post.tags} />
+              <SocialLinks postPath={slug} postNode={postNode} />
             </div>
+            <UserInfo config={config} />
+            <Disqus postNode={postNode} />
+            {/* <Footer config={config} /> */}
           </div>
-        </Layout>
-      </ThemeProvider>
+        </div>
+      </Layout>
     )
   }
 }

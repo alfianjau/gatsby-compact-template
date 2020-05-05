@@ -8,8 +8,8 @@ export default {
   },
   colors: {
     ...tailwind.colors,
-    primary: '#12b380',
-    secondary: '#008799',
+    primary: '#1e1e1e',
+    secondary: '#87733c',
     accent: '#3d3d3d',
     black: '#3d3d3d',
     gray: '#989898',
