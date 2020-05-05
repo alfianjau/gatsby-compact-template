@@ -5,7 +5,6 @@ import React, { Component } from 'react'
 import { Location } from '@reach/router'
 import { Link } from 'gatsby'
 import { Menu, X } from 'react-feather'
-// import Logo from './Logo'
 
 import './Nav.css'
 
@@ -48,47 +47,9 @@ export class Navigation extends Component {
     return (
       <nav className={`Nav ${active ? 'Nav-active' : ''}`}>
         <div className="Nav--Container container">
-          {/* <Link to="/" onClick={this.handleLinkClick}>
-            <CloudLightning />
-          </Link> */}
           <div className="Nav--Links">
             <NavLink to="/">Home</NavLink>
-            {/* <NavLink to="/design-system/">Plans</NavLink> */}
             <NavLink to="/blog/">Blog</NavLink>
-            {/* <div
-              className={`Nav--Group ${
-                this.state.activeSubNav === 'posts' ? 'active' : ''
-              }`}
-            >
-              <span
-                className={`NavLink Nav--GroupParent ${
-                  this.props.location.pathname.includes('posts') ||
-                  this.props.location.pathname.includes('blog') ||
-                  this.props.location.pathname.includes('post-categories')
-                    ? 'active'
-                    : ''
-                }`}
-                onClick={() => this.toggleSubNav('posts')}
-              >
-                Blog
-                <div className="Nav--GroupLinks">
-                  <NavLink to="/blog/" className="Nav--GroupLink">
-                    All Posts
-                  </NavLink>
-                  {/* {subNav.posts.map((link, index) => (
-                    <NavLink
-                      to={link.slug}
-                      key={'posts-subnav-link-' + index}
-                      className="Nav--GroupLink"
-                    >
-                      {link.title}
-                    </NavLink>
-                  ))} 
-                </div>
-              </span>
-            </div> */}
-            {/* <NavLink to="/about/">About</NavLink> */}
-            {/* <NavLink to="/about/">Contact Us</NavLink> */}
           </div>
           <button
             className="Button-blank Nav--MenuButton"

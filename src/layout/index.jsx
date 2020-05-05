@@ -18,8 +18,10 @@ export default class MainLayout extends React.Component {
       duration: 2000,
     })
   }
+
   render() {
     const { children } = this.props
+
     return (
       <div>
         <Header config={config} />

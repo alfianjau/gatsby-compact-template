@@ -1,16 +1,12 @@
 /** @jsx jsx */
 
-import { jsx, IconButton, NavLink } from 'theme-ui'
+import { jsx } from 'theme-ui'
 import { Component } from 'react'
 import { Link } from 'gatsby'
 import Navigation from '../Nav/Nav'
+import ColorButton from '../Buttons/ButtonColor'
 import pokooi from '../../../static/logos/svg/pokooi.svg'
 import './Header.css'
-// import Illustration from '../../../static/logos/digital-marketing.svg'
-
-// import UserLinks from '../UserLinks/UserLinks'
-
-// import './Header.css'
 
 class Header extends Component {
   render() {
@@ -46,6 +42,7 @@ class Header extends Component {
           </Link>
           <div sx={{ mx: 'auto' }} />
           <Navigation />
+          <ColorButton />
         </div>
       </header>
     )
